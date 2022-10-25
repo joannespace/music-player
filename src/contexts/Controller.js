@@ -13,27 +13,26 @@ function Controller() {
     isPlaying,
     playPreviousTrack,
     playNextTrack,
-    currentTrackIndex,
+    currentTrackName,
   } = useMusicPlayer();
 
   return (
-    <Box sx={{ mt: 1, pr: 3, pl: 3 }}>
+    <Box display="flex" sx={{ mt: 2, pr: 3, pl: 3, height: "40px" }}>
       <Button onClick={playPreviousTrack}>
         <SkipPreviousIcon sx={{ color: "#766DC1" }} />
       </Button>
 
-      {isPlaying && currentTrackIndex ? (
+      {isPlaying && currentTrackName ? (
         <Button onClick={togglePlay}>
           <PauseCircleIcon sx={{ color: "#766DC1" }} />
         </Button>
       ) : (
         <Button onClick={togglePlay}>
           <PlayCircleFilledWhiteIcon
-            sx={{ color: "#766DC1", fontSize: "2.5rem" }}
+            sx={{ color: "#766DC1", fontSize: "40px" }}
           />
         </Button>
       )}
-      {console.log(isPlaying)}
 
       <Button onClick={playNextTrack}>
         <SkipNextIcon sx={{ color: "#766DC1" }} />
