@@ -17,12 +17,14 @@ const TrackList = () => {
   return (
     <Stack spacing={2}>
       <Box sx={{ margin: "auto" }}>
-        {currentTrackIndex.toString() ? (
+        {currentTrackName ? (
           <Typography variant="h6" fontWeight="bold" fontStyle="italic">
             {currentTrackName}
           </Typography>
         ) : (
-          <Typography>Let's choose one song</Typography>
+          <Typography variant="h6" fontWeight="light" fontStyle="italic">
+            Let's choose a song
+          </Typography>
         )}
       </Box>
 
