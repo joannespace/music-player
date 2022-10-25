@@ -28,7 +28,9 @@ function Controller() {
         </Button>
       ) : (
         <Button onClick={togglePlay}>
-          <PlayCircleFilledWhiteIcon sx={{ color: "#766DC1" }} />
+          <PlayCircleFilledWhiteIcon
+            sx={{ color: "#766DC1", fontSize: "2.5rem" }}
+          />
         </Button>
       )}
       {console.log(isPlaying)}
